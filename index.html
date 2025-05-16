@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix - Solucions Informàtiques</title>
+    <link rel="icon" type="image/svg+xml" href="ChatGPT_Image_29_d_abr._de_2025__09_37_41-removebg-preview.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="ChatGPT Image 29 d’abr. de 2025, 09_37_41.png" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #1e3d58;
+            --color-primary-light: #2a5584;
+            --color-primary-dark: #15293b;
+            --color-secondary: #057dcd;
+            --color-secondary-light: #0693f2;
+            --color-secondary-dark: #0468a8;
+            --color-accent: #fdd835;
+            --color-accent-light: #ffeb99;
+            --color-accent-dark: #cb9700;
+            --color-success: #28a745;
+            --color-warning: #ffc107;
+            --color-danger: #dc3545;
+            --color-gray-100: #f8f9fa;
+            --color-gray-200: #e9ecef;
+            --color-gray-300: #dee2e6;
+            --color-gray-400: #ced4da;
+            --color-gray-500: #adb5bd;
+            --color-gray-600: #6c757d;
+            --color-gray-700: #495057;
+            --color-gray-800: #343a40;
+            --color-gray-900: #212529;
+            --color-black: #000;
+            --color-white: #fff;
+            
+            --font-family: 'Inter', sans-serif;
+            --font-size-base: 1rem;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-md: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            
+            --spacing-0: 0;
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-3: 0.75rem;
+            --spacing-4: 1rem;
+            --spacing-5: 1.25rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-10: 2.5rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            --spacing-20: 5rem;
+            
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 1rem;
+            --border-radius-xl: 1.5rem;
+            --border-radius-full: 9999px;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            --max-width: 1280px;
+            --header-height: 4.5rem;
+        }
+
+        /* Dark mode variables */
+        .dark-mode {
+            --color-primary: #2a5584;
+            --color-primary-light: #356ba6;
+            --color-primary-dark: #1e3d58;
+            --color-secondary: #0693f2;
+            --color-secondary-light: #34a9ff;
+            --color-secondary-dark: #0468a8;
+            --color-accent: #ffeb3b;
+            --color-accent-light: #fff176;
+            --color-accent-dark: #fdd835;
+            --color-gray-100: #1a1a1a;
+            --color-gray-200: #2d2d2d;
+            --color-gray-300: #444444;
+            --color-gray-400: #555555;
+            --color-gray-500: #777777;
+            --color-gray-600: #999999;
+            --color-gray-700: #bbbbbb;
+            --color-gray-800: #dddddd;
+            --color-gray-900: #f0f0f0;
+            --color-black: #ffffff;
+            --color-white: #121212;
+            
+            /* Adjust shadow opacity for dark mode */
+            --shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.07), 0 2px 4px -1px rgba(255, 255, 255, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.07), 0 4px 6px -2px rgba(255, 255, 255, 0.03);
+            --shadow-xl: 0 20px 25px -5px rgba(255, 255, 255, 0.07), 0 10px 10px -5px rgba(255, 255, 255, 0.02);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size-base);
+            line-height: 1.5;
+            color: var(--color-gray-800);
+            background-color: var(--color-gray-100);
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--color-secondary-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-4);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-3) var(--spacing-6);
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+            letter-spacing: 0.5px;
+            gap: var(--spacing-2);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--color-white);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-secondary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--color-white);
+        }
+
+        .btn-accent {
+            background-color: var(--color-accent);
+            color: var(--color-gray-900);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: var(--spacing-2) var(--spacing-4);
+            font-size: var(--font-size-xs);
+        }
+
+        .btn-lg {
+            padding: var(--spacing-4) var(--spacing-8);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(var(--color-primary-rgb), 0.9);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            height: var(--header-height);
+        }
+
+        header.scrolled {
+            background-color: var(--color-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-3);
+            color: var(--color-white);
+            font-weight: 700;
+            font-size: var(--font-size-2xl);
+            transition: transform var(--transition-fast);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius-md);
+            color: var(--color-primary);
+            font-size: var(--font-size-xl);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-6);
+        }
+
+        .nav-link {
+            color: var(--color-white);
+            font-weight: 500;
+            position: relative;
+            padding: var(--spacing-2) 0;
+            cursor: pointer;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: var(--color-accent);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-accent);
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: var(--font-size-xl);
+            color: var(--color-white);
+            cursor: pointer;
+            transition: transform var(--transition-fast);
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+            color: var(--color-accent);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            width: 20px;
+            height: 20px;
+            border-radius: var(--border-radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform var(--transition-fast);
+        }
+
+        .cart-icon:hover .cart-count {
+            transform: scale(1.1);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+            transition: transform var(--transition-fast);
+            margin-left: var(--spacing-4);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(20deg);
+            color: var(--color-accent);
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--spacing-16) 0;
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-10);
+        }
+
+        .section-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-2);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-accent);
+            border-radius: var(--border-radius-full);
+        }
+
+        .section-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--color-gray-600);
+            max-width: 600px;
+            margin: var(--spacing-6) auto 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-20) 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-5xl);
+            font-weight: 800;
+            margin-bottom: var(--spacing-4);
+            color: var(--color-primary);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-8);
+            color: var(--color-gray-700);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: center;
+            margin-top: var(--spacing-6);
+        }
+
+        .hero-image {
+            margin-top: var(--spacing-10);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            max-width: 90%;
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: transform var(--transition-normal);
+        }
+
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-10);
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: var(--font-size-lg);
+            color: var(--color-gray-700);
+            line-height: 1.7;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-normal);
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        .team-title {
+            font-size: var(--font-size-3xl);
+            color: var(--color-primary);
+            text-align: center;
+            margin: var(--spacing-16) 0 var(--spacing-8);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-8);
+        }
+
+        .team-member {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            text-align: center;
+            padding-bottom: var(--spacing-6);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: var(--border-radius-full);
+            object-fit: cover;
+            margin: var(--spacing-6) auto;
+            border: 4px solid var(--color-primary);
+            transition: transform var(--transition-normal);
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-member h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .team-member p {
+            color: var(--color-gray-600);
+            font-size: var(--font-size-sm);
+            padding: 0 var(--spacing-4);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-3);
+            margin-top: var(--spacing-4);
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--border-radius-full);
+            background-color: var(--color-gray-200);
+            color: var(--color-gray-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-3px);
+        }
+
+        /* Services & Products Section */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-8);
+        }
+
+        .tab {
+            background-color: var(--color-gray-200);
+            color: var(--color-gray-700);
+            padding: var(--spacing-3) var(--spacing-6);
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .tab.active, .tab:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .services-grid, .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-6);
+        }
+
+        .service-card, .product-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover, .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: var(--color-gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: var(--font-size-4xl);
+        }
+
+        .product-card .card-image {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: var(--spacing-6);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-2);
+            font-weight: 600;
+        }
+
+        .card-description {
+            color: var(--color-gray-600);
+            margin-bottom: var(--spacing-4);
+            flex-grow: 1;
+        }
+
+        .card-price {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-to-cart {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border: none;
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-2) var(--spacing-4);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-2);
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Cart Section */
+        .cart-section {
+            min-height: 60vh;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: var(--spacing-16);
+            color: var(--color-gray-500);
+        }
+
+        .cart-empty i {
+            font-size: var(--font-size-5xl);
+            margin-bottom: var(--spacing-4);
+            color: var(--color-gray-300);
+        }
+
+        .cart-empty p {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-6);
+        }
+
+        .cart-items {
+            margin-bottom: var(--spacing-8);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-4);
+            margin-bottom: var(--spacing-4);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-fast);
+        }
+
+        .cart-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-gray-200);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-2xl);
+            color: var(--color-primary);
+            margin-right: var(--spacing-4);
+            flex-shrink: 0;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-1);
+        }
+
+        .cart-item-price {
+            color: var(--color-gray-700);
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-4);
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--color-gray-300);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            background-color: var(--color-gray-200);
+            border: none;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+
+        .quantity-btn:hover {
+            background-color: var(--color-gray-300);
+        }
+
+        .quantity-input {
+            width: 40px;
+            height: 32px;
+            border: none;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .remove-item {
+            background-color: transparent;
+            border: none;
+            color: var(--color-danger);
+            cursor: pointer;
+            transition: transform var(--transition-fast);
+        }
+
+        .remove-item:hover {
+            transform: scale(1.2);
+        }
+
+        .cart-summary {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-6);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--font-size-xl);
+            padding-bottom: var(--spacing-4);
+            margin-bottom: var(--spacing-4);
+            border-bottom: 1px solid var(--color-gray-300);
+        }
+
+        .cart-total-label {
+            font-weight: 600;
+        }
+
+        .cart-total-value {
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: var(--spacing-4);
+        }
+
+        .clear-cart {
+            flex: 1;
+        }
+
+        .checkout-btn {
+            flex: 2;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-10);
+        }
+
+        .contact-info {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius-lg);
+        }
+
+        .contact-info-title {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-6);
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-info-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--color-accent);
+            border-radius: var(--border-radius-full);
+        }
+
+        .contact-details {
+            margin-top: var(--spacing-6);
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-4);
+            align-items: flex-start;
+        }
+
+        .contact-detail i {
+            color: var(--color-accent);
+            font-size: var(--font-size-xl);
+            margin-top: 3px;
+        }
+
+        .map {
+            margin-top: var(--spacing-6);
+            height: 200px;
+            background-color: var(--color-gray-300);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            filter: grayscale(0.3);
+            transition: filter var(--transition-fast);
+        }
+
+        .map:hover {
+            filter: grayscale(0);
+        }
+
+        .contact-form {
+            background-color: var(--color-white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-4);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-2);
+            font-weight: 500;
+            color: var(--color-gray-700);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--spacing-3);
+            border: 1px solid var(--color-gray-300);
+            border-radius: var(--border-radius-md);
+            background-color: var(--color-gray-100);
+            color: var(--color-gray-800);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(30, 61, 88, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Reviews Section */
+        .reviews-container {
+            margin-top: var(--spacing-10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-slider {
+            display: flex;
+            transition: transform var(--transition-normal);
+            will-change: transform;
+        }
+
+        .review-slide {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 var(--spacing-4);
+            text-align: center;
+        }
+
+        .review-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--border-radius-full);
+            object-fit: cover;
+            margin-bottom: var(--spacing-4);
+            border: 3px solid var(--color-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .review-text {
+            font-size: var(--font-size-lg);
+            line-height: 1.7;
+            color: var(--color-gray-700);
+            margin-bottom: var(--spacing-4);
+            position: relative;
+        }
+
+        .review-text::before, .review-text::after {
+            content: '"';
+            font-size: var(--font-size-4xl);
+            color: var(--color-primary);
+            opacity: 0.2;
+            position: absolute;
+        }
+
+        .review-text::before {
+            left: -20px;
+            top: -10px;
+        }
+
+        .review-text::after {
+            right: -20px;
+            bottom: -30px;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .review-controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-4);
+            margin-top: var(--spacing-6);
+        }
+
+        .review-control {
+            background-color: var(--color-gray-200);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-700);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .review-control:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .review-dots {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-2);
+            margin-top: var(--spacing-6);
+        }
+
+        .review-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: var(--border-radius-full);
+            background-color: var(--color-gray-300);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .review-dot.active, .review-dot:hover {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            margin-top: var(--spacing-10);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            margin-bottom: var(--spacing-4);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-fast);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-4) var(--spacing-6);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--color-primary);
+            transition: background-color var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-gray-100);
+        }
+
+        .faq-question i {
+            transition: transform var(--transition-fast);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-6);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal), padding var(--transition-normal);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: var(--spacing-4) var(--spacing-6) var(--spacing-6);
+            max-height: 300px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-primary-dark);
+            color: var(--color-white);
+            padding: var(--spacing-10) 0 var(--spacing-4);
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-8);
+            margin-bottom: var(--spacing-10);
+        }
+
+        .footer-column h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-4);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 30px;
+            height: 2px;
+            background-color: var(--color-accent);
+            border-radius: var(--border-radius-full);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: var(--spacing-2);
+        }
+
+        .footer-link a {
+            color: var(--color-gray-400);
+            transition: color var(--transition-fast), transform var(--transition-fast);
+            display: inline-block;
+        }
+
+        .footer-link a:hover {
+            color: var(--color-accent);
+            transform: translateX(5px);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--spacing-3);
+            margin-top: var(--spacing-4);
+        }
+
+        .footer-social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-full);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-social-link:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-newsletter input {
+            width: 100%;
+            padding: var(--spacing-3);
+            border: none;
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-3);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+        }
+
+        .footer-newsletter input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-newsletter input::placeholder {
+            color: var(--color-gray-400);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-500);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-4) var(--spacing-8);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            opacity: 0;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-3);
+        }
+
+        .notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .notification i {
+            color: var(--color-accent);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            width: 90%;
+            max-width: 600px;
+            padding: var(--spacing-6);
+            transform: translateY(20px);
+            transition: transform var(--transition-normal);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--spacing-4);
+            right: var(--spacing-4);
+            background: none;
+            border: none;
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+            color: var(--color-gray-500);
+            transition: color var(--transition-fast);
+        }
+
+        .modal-close:hover {
+            color: var(--color-primary);
+        }
+
+        .modal-header {
+            margin-bottom: var(--spacing-6);
+        }
+
+        .modal-title {
+            font-size: var(--font-size-2xl);
+            color: var(--color-primary);
+        }
+
+        /* Search */
+        .search-container {
+            position: relative;
+            margin-right: var(--spacing-4);
+        }
+
+        .search-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: var(--border-radius-full);
+            padding: var(--spacing-2) var(--spacing-6);
+            color: var(--color-white);
+            width: 200px;
+            transition: all var(--transition-normal);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 250px;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: var(--spacing-2);
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            z-index: 100;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: var(--spacing-3);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .search-result-item:hover {
+            background-color: var(--color-gray-100);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 { margin-top: var(--spacing-1); }
+        .mt-2 { margin-top: var(--spacing-2); }
+        .mt-4 { margin-top: var(--spacing-4); }
+        .mt-6 { margin-top: var(--spacing-6); }
+        .mt-8 { margin-top: var(--spacing-8); }
+        .mt-12 { margin-top: var(--spacing-12); }
+
+        .mb-1 { margin-bottom: var(--spacing-1); }
+        .mb-2 { margin-bottom: var(--spacing-2); }
+        .mb-4 { margin-bottom: var(--spacing-4); }
+        .mb-6 { margin-bottom: var(--spacing-6); }
+        .mb-8 { margin-bottom: var(--spacing-8); }
+        .mb-12 { margin-bottom: var(--spacing-12); }
+
+        /* Loader */
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid var(--color-gray-200);
+            border-bottom-color: var(--color-primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .section-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .hero-title {
+                font-size: var(--font-size-4xl);
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                height: 0;
+                flex-direction: column;
+                background-color: var(--color-primary);
+                overflow: hidden;
+                transition: height var(--transition-normal);
+                z-index: 90;
+            }
+            
+            .nav-links.active {
+                height: calc(100vh - var(--header-height));
+                padding: var(--spacing-6) 0;
+            }
+            
+            .nav-link {
+                padding: var(--spacing-4) 0;
+                font-size: var(--font-size-lg);
+                text-align: center;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --header-height: 4rem;
+            }
+            
+            .section {
+                padding: var(--spacing-10) 0;
+            }
+            
+            .section-title {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid, .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-input {
+                width: 150px;
+            }
+            
+            .search-input:focus {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container navbar">
+            <div class="logo" onclick="showSection('inicio')">
+                <div class="logo-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <span>TechFix</span>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Buscar...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links" id="nav-links">
+                <a class="nav-link active" onclick="showSection('inicio')">Inici</a>
+                <a class="nav-link" onclick="showSection('nosaltres')">Nosaltres</a>
+                <a class="nav-link" onclick="showSection('serveis')">Serveis</a>
+                <a class="nav-link" onclick="showSection('contacte')">Contacte</a>
+                <a class="nav-link" onclick="showSection('carrito')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="mobile-cart-count">0</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="cart-icon" onclick="showSection('carrito')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="inicio" class="section active">
+            <div class="container hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Benvingut a TechFix</h1>
+                    <h3 class="hero-subtitle">El teu centre integral de solucions informàtiques a Barcelona.</h3>
+                    <p>Som un equip apassionat per la tecnologia, dedicat a oferir-te un servei excepcional des de 2025, a TechFix trobaràs una àmplia gamma de serveis de reparació, instal·lació, consultoria i una selecció de productes d'alta qualitat. Deixa que la tecnologia treballi per a tu!</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showSection('serveis')">
+                            <i class="fas fa-tools"></i> Veure Serveis
+                        </button>
+                        <button class="btn btn-outline" onclick="showSection('contacte')">
+                            <i class="fas fa-phone"></i> Contacta'ns
+                        </button>
+                    </div>
+                </div>
+                
+                <img src="ChatGPT Image 28 d’abr. de 2025, 10_26_14.png" alt="Botiga d'informàtica" class="hero-image">
+            </div>
+        </section>
+        
+        <section id="nosaltres" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Qui Som</h2>
+                    <p class="section-subtitle">A TechFix trobaràs reparació, venda i consultoria tecnològica. Des de 2025, ajudem als nostres clients a treure el màxim profit de la seva tecnologia amb un servei personalitzat i de confiança.</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>TechFix va néixer amb la visió de proporcionar solucions tecnològiques accessibles i de qualitat a particulars i empreses. El nostre equip està format per professionals amb àmplia experiència en el sector, sempre disposats a ajudar-te amb les teves necessitats informàtiques.</p>
+                        <p class="mt-4">Ens distingim per oferir un servei personalitzat, transparent i honest, buscant sempre la millor solució per a cada client.</p>
+                        <p class="mt-4">La nostra missió és simplificar la tecnologia i fer-la accessible per a tothom, proporcionant serveis de qualitat i assessorament expert.</p>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="ChatGPT Image 28 d’abr. de 2025, 10_26_21.png" alt="Interior de la botiga">
+                    </div>
+                </div>
+                
+                <h3 class="team-title">El Nostre Equip</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="20240712_000711.jpg" alt="Gaganjit Singh">
+                        <h3>Gaganjit Singh</h3>
+                        <p>Director Tècnic</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="foto2.jpeg" alt="Lincoln Osifo">
+                        <h3>Lincoln Osifo</h3>
+                        <p>Especialista en Hardware</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="foto4.jpeg" alt="Erik Pérez">
+                        <h3>Erik Pérez</h3>
+                        <p>Consultor de Software</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="serveis" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Els Nostres Serveis</h2>
+                    <p class="section-subtitle">A TechFix oferim una àmplia gamma de serveis i productes informàtics per a satisfer totes les teves necessitats tecnològiques.</p>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active" data-tab="services">Serveis Tècnics</div>
+                    <div class="tab" data-tab="products">Productes</div>
+                </div>
+                
+                <div class="tab-content active" id="services-tab">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="card-image">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Reparació d'ordinadors</h3>
+                                <p class="card-description">Reparació i manteniment de PCs i portàtils. Solucions ràpides i eficients per a qualsevol problema tècnic.</p>
+                                <div class="card-price">40€/hora</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Reparació d\'ordinadors', 40, 'service')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="card-image">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Instal·lació de programari</h3>
+                                <p class="card-description">Instal·lació de sistemes operatius i aplicacions. Actualitzacions i optimització del teu equip.</p>
+                                <div class="card-price">50€</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Instal·lació de programari', 50, 'service')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="card-image">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Consultoria tecnològica</h3>
+                                <p class="card-description">Assessorament per millorar el rendiment informàtic i optimitzar els teus recursos tecnològics.</p>
+                                <div class="card-price">60€/hora</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Consultoria tecnològica', 60, 'service')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="products-tab">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="card-image" style="background-image: url('lenovo.webp')"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Portatil Lenovo</h3>
+                                <p class="card-description">Portatil amb intel core i5, 1TB SSD, 16GB RAM. Perfecte per a tasques exigents i multitasca.</p>
+                                <div class="card-price">599€</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Portatil Lenovo', 599, 'product')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="card-image" style="background-image: url('monitorcurvo.webp')"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Monitor Samsung</h3>
+                                <p class="card-description">Monitor Curvo 24" Essential S3 S36GD FHD 100Hz. Experiència immersiva per a treball i jocs.</p>
+                                <div class="card-price">119€</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Monitor Samsung', 119, 'product')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="card-image" style="background-image: url('impresora.webp')"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Impressora HP</h3>
+                                <p class="card-description">Impresora HP LaserJet M110w. Solució d'impressió ràpida i fiable per a la teva oficina o llar.</p>
+                                <div class="card-price">100€</div>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="add-to-cart" onclick="afegirAlCarrito('Impressora HP', 100, 'product')">
+                                        <i class="fas fa-plus"></i> Afegir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="carrito" class="section">
+            <div class="container cart-section">
+                <div class="section-header">
+                    <h2 class="section-title">El Teu Carrito</h2>
+                    <p class="section-subtitle">Revisa els productes i serveis que has seleccionat.</p>
+                </div>
+                
+                <div id="cart-empty" class="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>El teu carrito està buit.</p>
+                    <button class="btn btn-primary" onclick="showSection('serveis')">
+                        <i class="fas fa-shopping-bag"></i> Continuar comprant
+                    </button>
+                </div>
+                
+                <div id="cart-content" style="display: none;">
+                    <div id="cart-items" class="cart-items"></div>
+                    
+                    <div class="cart-summary">
+                        <div class="cart-total">
+                            <span class="cart-total-label">Total</span>
+                            <span class="cart-total-value" id="cart-total">0€</span>
+                        </div>
+                        
+                        <div class="cart-actions">
+                            <button class="btn btn-outline clear-cart" onclick="buidarCarrito()">
+                                <i class="fas fa-trash"></i> Buidar
+                            </button>
+                            <button class="btn btn-primary checkout-btn" onclick="checkout()">
+                                <i class="fas fa-credit-card"></i> Finalitzar Compra
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacte" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacta'ns</h2>
+                    <p class="section-subtitle">Estem aquí per ajudar-te amb qualsevol dubte o consulta. Posa't en contacte amb nosaltres!</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Informació de Contacte</h3>
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Adreça</strong>
+                                    <p>Carrer Fictici 123, Ciutat Tech</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong>Telèfon</strong>
+                                    <p>123-456-789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>contacte@techfix.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Horari</strong>
+                                    <p>Dilluns a Divendres: 9:00 - 20:00</p>
+                                    <p>Dissabte: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95777.58170520248!2d2.0670557136718657!3d41.38506744063357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Espanha!5e0!3m2!1spt-BR!2sbr!4v1631051368233!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3 class="modal-title mb-6">Envia'ns un missatge</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nom</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Assumpte</label>
+                                <input type="text" id="subject" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Missatge</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Missatge
+                            </button>
+                        </form>
+                        
+                        <div class="reviews-container mt-12">
+                            <h3 class="modal-title mb-6">Resenyes dels nostres clients</h3>
+                            
+                            <div class="review-slider" id="review-slider">
+                                <div class="review-slide">
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Elvis Presley Jr." class="review-avatar">
+                                    <p class="review-text">Un servei excel·lent! El meu ordinador va quedar com nou en menys de 24 hores.</p>
+                                    <div class="review-author">Elvis Presley Jr.</div>
+                                </div>
+                                
+                                <div class="review-slide">
+                                    <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Jennifer Lawrence" class="review-avatar">
+                                    <p class="review-text">El teclat mecànic que vaig comprar és espectacular, gràcies per l'assessorament!</p>
+                                    <div class="review-author">Jennifer Lawrence</div>
+                                </div>
+                                
+                                <div class="review-slide">
+                                    <img src="https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg" alt="Antonio Recio" class="review-avatar">
+                                    <p class="review-text">Molt professionals i atents, recomanaria TechFix sense dubtar-ho.</p>
+                                    <div class="review-author">Antonio Recio</div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-controls">
+                                <button class="review-control" id="review-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="review-control" id="review-next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="review-dots" id="review-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-container mt-12">
+                    <h3 class="modal-title mb-6 text-center">Preguntes Freqüents</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Quant temps triga la reparació d'un ordinador?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>El temps de reparació depèn de la complexitat del problema. En general, les reparacions bàsiques es completen en 24-48 hores. Per a problemes més complexos, poden ser necessaris entre 3-5 dies. Sempre t'informarem del temps estimat quan rebem el teu equip.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Oferiu garantia en les vostres reparacions?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, totes les nostres reparacions inclouen una garantia de 3 mesos. Els productes nous tenen la garantia del fabricant, que generalment és d'1 a 2 anys depenent del producte.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Quines formes de pagament accepteu?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Acceptem efectiu, transferència bancària, targetes de crèdit/dèbit (Visa, Mastercard, American Express) i PayPal. Per a empreses, també oferim facturació mensual prèvia aprovació.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Feu serveis a domicili?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, oferim serveis a domicili per a particulars i empreses. El cost del desplaçament depèn de la distància, però és gratuït per a serveis dins de la ciutat de Barcelona.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <span>TechFix</span>
+                    </div>
+                    <p class="mt-4">El teu centre integral de solucions informàtiques a Barcelona. Oferim serveis de reparació, consultoria i venda de productes.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enllaços Ràpids</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a onclick="showSection('inicio')">Inici</a></li>
+                        <li class="footer-link"><a onclick="showSection('nosaltres')">Nosaltres</a></li>
+                        <li class="footer-link"><a onclick="showSection('serveis')">Serveis</a></li>
+                        <li class="footer-link"><a onclick="showSection('contacte')">Contacte</a></li>
+                        <li class="footer-link"><a onclick="showSection('carrito')">Carrito</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Serveis</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a onclick="showSection('serveis')">Reparació d'ordinadors</a></li>
+                        <li class="footer-link"><a onclick="showSection('serveis')">Instal·lació de programari</a></li>
+                        <li class="footer-link"><a onclick="showSection('serveis')">Consultoria tecnològica</a></li>
+                        <li class="footer-link"><a onclick="showSection('serveis')">Venda de productes</a></li>
+                        <li class="footer-link"><a onclick="showSection('serveis')">Manteniment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscriu-te per rebre les últimes novetats i ofertes especials.</p>
+                    <div class="footer-newsletter mt-4">
+                        <input type="email" placeholder="El teu email">
+                        <button class="btn btn-accent mt-2">Subscriure</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFix. Tots els drets reservats. Dissenyat amb <i class="fas fa-heart" style="color: var(--color-accent);"></i> a Barcelona</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-message">S'ha afegit al carretó</span>
+    </div>
+    
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal">
+            <button class="modal-close" id="close-checkout-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 class="modal-title">Finalitzar Compra</h3>
+            </div>
+            <div class="modal-content">
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="checkout-name" class="form-label">Nom Complet</label>
+                        <input type="text" id="checkout-name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-email" class="form-label">Email</label>
+                        <input type="email" id="checkout-email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-address" class="form-label">Adreça</label>
+                        <input type="text" id="checkout-address" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-payment" class="form-label">Mètode de Pagament</label>
+                        <select id="checkout-payment" class="form-control" required>
+                            <option value="">Selecciona un mètode</option>
+                            <option value="credit">Targeta de Crèdit</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="transfer">Transferència Bancària</option>
+                        </select>
+                    </div>
+                    
+                    <div id="credit-card-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="card-number" class="form-label">Número de Targeta</label>
+                            <input type="text" id="card-number" class="form-control" placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                        
+                        <div style="display: flex; gap: 16px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label for="card-expiry" class="form-label">Data Caducitat</label>
+                                <input type="text" id="card-expiry" class="form-control" placeholder="MM/AA">
+                            </div>
+                            
+                            <div class="form-group" style="flex: 1;">
+                                <label for="card-cvc" class="form-label">CVC</label>
+                                <input type="text" id="card-cvc" class="form-control" placeholder="XXX">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-notes" class="form-label">Notes Addicionals</label>
+                        <textarea id="checkout-notes" class="form-control"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-lock"></i> Confirmar Compra
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Comanda Completada</h3>
+            </div>
+            <div class="modal-content text-center">
+                <i class="fas fa-check-circle" style="font-size: 5rem; color: var(--color-success); margin: 2rem 0;"></i>
+                <p style="font-size: 1.25rem; margin-bottom: 1rem;">La teva comanda s'ha processat correctament!</p>
+                <p>Hem enviat un correu electrònic amb els detalls de la teva compra.</p>
+                <p style="margin-top: 1rem;">Número de comanda: <strong id="order-number">ORD-12345</strong></p>
+                <button class="btn btn-primary mt-8" onclick="closeSuccessModal()">
+                    Tornar a la botiga
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="review-modal">
+        <div class="modal">
+            <button class="modal-close" id="close-review-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 class="modal-title">Deixa la teva Opinió</h3>
+            </div>
+            <div class="modal-content">
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-name" class="form-label">El teu nom</label>
+                        <input type="text" id="review-name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Valoració</label>
+                        <div class="rating-select">
+                            <i class="far fa-star rating-star" data-rating="1"></i>
+                            <i class="far fa-star rating-star" data-rating="2"></i>
+                            <i class="far fa-star rating-star" data-rating="3"></i>
+                            <i class="far fa-star rating-star" data-rating="4"></i>
+                            <i class="far fa-star rating-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="rating-value" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-text" class="form-label">La teva opinió</label>
+                        <textarea id="review-text" class="form-control" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Ressenya
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Variables globals
+        const carrito = [];
+        const resenyes = [];
+        let currentReviewIndex = 0;
+        let darkMode = false;
+        
+        // Funció per mostrar seccions
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            sections.forEach(sec => sec.classList.remove('active'));
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            document.getElementById(section).classList.add('active');
+            document.querySelectorAll(`.nav-link`).forEach(link => {
+                if (link.textContent.trim().toLowerCase().includes(section.toLowerCase())) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Tancar menú mòbil si està obert
+            document.getElementById('nav-links').classList.remove('active');
+            document.getElementById('mobile-nav-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Funció per afegir al carrito
+        function afegirAlCarrito(nom, preu, tipus) {
+            const id = `${nom}-${Date.now()}`;
+            carrito.push({ id, nom, preu, tipus, quantity: 1 });
+            actualitzarCarrito();
+            mostrarNotificacio(`S'ha afegit "${nom}" al carretó`);
+        }
+        
+        // Funció per mostrar notificacions
+        function mostrarNotificacio(missatge) {
+            const notification = document.getElementById('notification');
+            const notificationMessage = document.getElementById('notification-message');
+            
+            notificationMessage.textContent = missatge;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Funció per eliminar un item del carrito
+        function eliminarItem(id) {
+            const index = carrito.findIndex(item => item.id === id);
+            if (index !== -1) {
+                const nomItem = carrito[index].nom;
+                carrito.splice(index, 1);
+                actualitzarCarrito();
+                mostrarNotificacio(`S'ha eliminat "${nomItem}" del carretó`);
+            }
+        }
+        
+        // Funció per buidar el carrito
+        function buidarCarrito() {
+            if (carrito.length > 0) {
+                carrito.length = 0;
+                actualitzarCarrito();
+                mostrarNotificacio('S\'ha buidat el carretó');
+            }
+        }
+        
+        // Funció per actualitzar la quantitat d'un producte
+        function updateQuantity(id, change) {
+            const item = carrito.find(item => item.id === id);
+            if (item) {
+                const newQuantity = item.quantity + change;
+                if (newQuantity <= 0) {
+                    eliminarItem(id);
+                } else {
+                    item.quantity = newQuantity;
+                    actualitzarCarrito();
+                }
+            }
+        }
+        
+        // Funció per actualitzar la visualització del carrito
+        function actualitzarCarrito() {
+            const cartCount = document.getElementById('cart-count');
+            const mobileCartCount = document.getElementById('mobile-cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const emptyCart = document.getElementById('cart-empty');
+            const cartContent = document.getElementById('cart-content');
+            
+            // Actualitzar contador
+            const totalItems = carrito.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            mobileCartCount.textContent = totalItems;
+            
+            // Mostrar contingut del carrito o missatge de buit
+            if (carrito.length === 0) {
+                emptyCart.style.display = 'block';
+                cartContent.style.display = 'none';
+            } else {
+                emptyCart.style.display = 'none';
+                cartContent.style.display = 'block';
+                
+                // Netejar i actualitzar items
+                cartItems.innerHTML = '';
+                let total = 0;
+                
+                carrito.forEach(item => {
+                    const itemTotal = item.preu * item.quantity;
+                    total += itemTotal;
+                    
+                    const cartItemEl = document.createElement('div');
+                    cartItemEl.className = 'cart-item';
+                    
+                    cartItemEl.innerHTML = `
+                        <div class="cart-item-image">
+                            <i class="${item.tipus === 'product' ? 'fas fa-shopping-bag' : 'fas fa-tools'}"></i>
+                        </div>
+                        <div class="cart-item-details">
+                            <h4 class="cart-item-title">${item.nom}</h4>
+                            <p class="cart-item-price">${item.preu}€ x ${item.quantity} = ${itemTotal}€</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <div class="quantity-control">
+                                <button class="quantity-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                                <span class="quantity-input">${item.quantity}</span>
+                                <button class="quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="eliminarItem('${item.id}')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                    
+                    cartItems.appendChild(cartItemEl);
+                });
+                
+                // Actualitzar total
+                cartTotal.textContent = `${total}€`;
+            }
+            
+            // Guardar carrito a localStorage
+            localStorage.setItem('techfixCart', JSON.stringify(carrito));
+        }
+        
+        // Checkout
+        function checkout() {
+            if (carrito.length === 0) {
+                mostrarNotificacio('El carretó està buit');
+                return;
+            }
+            
+            document.getElementById('checkout-modal').classList.add('active');
+        }
+        
+        // Tancar modal checkout
+        document.getElementById('close-checkout-modal').addEventListener('click', function() {
+            document.getElementById('checkout-modal').classList.remove('active');
+        });
+        
+        // Gestionar formulari checkout
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            document.getElementById('checkout-modal').classList.remove('active');
+            document.getElementById('order-number').textContent = 'ORD-' + Math.floor(Math.random() * 100000);
+            document.getElementById('success-modal').classList.add('active');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Mostrar/ocultar camps targeta segons mètode pagament
+        document.getElementById('checkout-payment').addEventListener('change', function() {
+            const creditCardFields = document.getElementById('credit-card-fields');
+            if (this.value === 'credit') {
+                creditCardFields.style.display = 'block';
+            } else {
+                creditCardFields.style.display = 'none';
+            }
+        });
+        
+        // Tancar modal èxit
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.remove('active');
+            buidarCarrito();
+            showSection('inicio');
+        }
+        
+        // Obrir modal ressenya
+        function openReviewModal() {
+            document.getElementById('review-modal').classList.add('active');
+        }
+        
+        // Tancar modal ressenya
+        document.getElementById('close-review-modal').addEventListener('click', function() {
+            document.getElementById('review-modal').classList.remove('active');
+        });
+        
+        // Seleccionar estrelles valoració
+        document.querySelectorAll('.rating-star').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                document.getElementById('rating-value').value = rating;
+                
+                document.querySelectorAll('.rating-star').forEach((s, index) => {
+                    if (index < rating) {
+                        s.className = 'fas fa-star rating-star';
+                    } else {
+                        s.className = 'far fa-star rating-star';
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseover', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                
+                document.querySelectorAll('.rating-star').forEach((s, index) => {
+                    if (index < rating) {
+                        s.className = 'fas fa-star rating-star';
+                    } else {
+                        s.className = 'far fa-star rating-star';
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseout', function() {
+                const currentRating = parseInt(document.getElementById('rating-value').value);
+                
+                document.querySelectorAll('.rating-star').forEach((s, index) => {
+                    if (index < currentRating) {
+                        s.className = 'fas fa-star rating-star';
+                    } else {
+                        s.className = 'far fa-star rating-star';
+                    }
+                });
+            });
+        });
+        
+        // Gestionar formulari ressenya
+        document.getElementById('review-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nom = document.getElementById('review-name').value;
+            const text = document.getElementById('review-text').value;
+            const rating = document.getElementById('rating-value').value;
+            
+            if (nom && text && rating > 0) {
+                resenyes.push({ nom, text, rating });
+                document.getElementById('review-modal').classList.remove('active');
+                mostrarNotificacio('Gràcies per la teva ressenya!');
+                this.reset();
+                document.querySelectorAll('.rating-star').forEach(s => {
+                    s.className = 'far fa-star rating-star';
+                });
+                document.getElementById('rating-value').value = 0;
+            } else {
+                mostrarNotificacio('Si us plau, omple tots els camps');
+            }
+        });
+        
+        // Gestionar formulari contacte
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                mostrarNotificacio('Missatge enviat correctament');
+                this.reset();
+            } else {
+                mostrarNotificacio('Si us plau, omple tots els camps');
+            }
+        });
+        
+        // Tabs de serveis i productes
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                this.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Toggle tema fosc/clar
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            darkMode = !darkMode;
+            
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                this.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.classList.remove('dark-mode');
+                this.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+            
+            localStorage.setItem('techfixDarkMode', darkMode);
+        });
+        
+        // Toggle menú mòbil
+        document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+            
+            if (navLinks.classList.contains('active')) {
+                this.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                this.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Slider de ressenyes
+        function changeReview(direction) {
+            const slider = document.getElementById('review-slider');
+            const slides = slider.querySelectorAll('.review-slide');
+            const dots = document.getElementById('review-dots');
+            
+            if (direction === 'next') {
+                currentReviewIndex = (currentReviewIndex + 1) % slides.length;
+            } else {
+                currentReviewIndex = (currentReviewIndex - 1 + slides.length) % slides.length;
+            }
+            
+            slider.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+            
+            document.querySelectorAll('.review-dot').forEach((dot, index) => {
+                if (index === currentReviewIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        document.getElementById('review-next').addEventListener('click', function() {
+            changeReview('next');
+        });
+        
+        document.getElementById('review-prev').addEventListener('click', function() {
+            changeReview('prev');
+        });
+        
+        // FAQ accordions
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Cerca
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchTerm = this.value.trim().toLowerCase();
+            const searchResults = document.getElementById('search-results');
+            
+            if (searchTerm.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+            
+            // Simular cerca
+            const serviciosData = [
+                { nom: 'Reparació d\'ordinadors', tipus: 'service', section: 'serveis' },
+                { nom: 'Instal·lació de programari', tipus: 'service', section: 'serveis' },
+                { nom: 'Consultoria tecnològica', tipus: 'service', section: 'serveis' },
+                { nom: 'Portatil Lenovo', tipus: 'product', section: 'serveis' },
+                { nom: 'Monitor Samsung', tipus: 'product', section: 'serveis' },
+                { nom: 'Impressora HP', tipus: 'product', section: 'serveis' },
+                { nom: 'Nosaltres', tipus: 'page', section: 'nosaltres' },
+                { nom: 'Contacte', tipus: 'page', section: 'contacte' }
+            ];
+            
+            const results = serviciosData.filter(item => 
+                item.nom.toLowerCase().includes(searchTerm)
+            );
+            
+            if (results.length > 0) {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '';
+                
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'search-result-item';
+                    resultItem.textContent = result.nom;
+                    resultItem.addEventListener('click', function() {
+                        showSection(result.section);
+                        searchResults.style.display = 'none';
+                        document.getElementById('search-input').value = '';
+                    });
+                    
+                    searchResults.appendChild(resultItem);
+                });
+            } else {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<div class="search-result-item">No s\'han trobat resultats</div>';
+            }
+        });
+        
+        document.addEventListener('click', function(e) {
+            const searchResults = document.getElementById('search-results');
+            const searchInput = document.getElementById('search-input');
+            
+            if (e.target !== searchInput && !searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+        
+        // Animacions en scroll
+        function handleScrollAnimations() {
+            const header = document.getElementById('header');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        window.addEventListener('scroll', handleScrollAnimations);
+        
+        // Inicialització de la pàgina
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carrito des de localStorage
+            const savedCart = localStorage.getItem('techfixCart');
+            if (savedCart) {
+                try {
+                    const parsed = JSON.parse(savedCart);
+                    if (Array.isArray(parsed)) {
+                        carrito.push(...parsed);
+                        actualitzarCarrito();
+                    }
+                } catch (e) {
+                    console.error('Error parsing cart data:', e);
+                }
+            }
+            
+            // Tema des de localStorage
+            const savedDarkMode = localStorage.getItem('techfixDarkMode');
+            if (savedDarkMode === 'true') {
+                darkMode = true;
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            
+            // Configurar punts del slider de ressenyes
+            const reviewSlider = document.getElementById('review-slider');
+            const reviewSlides = reviewSlider.querySelectorAll('.review-slide');
+            const reviewDots = document.getElementById('review-dots');
+            
+            reviewSlides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = index === 0 ? 'review-dot active' : 'review-dot';
+                dot.addEventListener('click', function() {
+                    currentReviewIndex = index;
+                    reviewSlider.style.transform = `translateX(-${index * 100}%)`;
+                    
+                    document.querySelectorAll('.review-dot').forEach((d, i) => {
+                        if (i === index) {
+                            d.classList.add('active');
+                        } else {
+                            d.classList.remove('active');
+                        }
+                    });
+                });
+                
+                reviewDots.appendChild(dot);
+            });
+            
+            // Precargar ressenyes
+            resenyes.push(
+                { nom: "Elvis Presley Jr.", text: "Un servei excel·lent! El meu ordinador va quedar com nou en menys de 24 hores.", rating: 5 },
+                { nom: "Jennifer Lawrence", text: "El teclat mecànic que vaig comprar és espectacular, gràcies per l'assessorament!", rating: 5 },
+                { nom: "Antonio Recio", text: "Molt professionals i atents, recomanaria TechFix sense dubtar-ho.", rating: 4 }
+            );
+            
+            // Iniciar animacions
+            handleScrollAnimations();
+        });
+    </script>
+</body>
+</html>
